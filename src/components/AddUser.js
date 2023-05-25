@@ -1,9 +1,11 @@
-import React, {  useState } from 'react';
+import React, {  useContext, useState } from 'react';
 import '../Styles/AddUser.css';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { store } from '../App';
+// import axios from 'axios';
 const AddUser = () => {
     const navigate = useNavigate();
+    const context = useContext(store)
     const [data, setData] = useState(
         {
             stuname:"",
@@ -23,11 +25,11 @@ console.log(data)
 
 const handlesubmit = (e) => {
         e.preventDefault();
-        // context.details.push(data);
-        // console.log(context.details)
-axios.post('http://localhost:8000/adduser', data)
-.then((res)=>console.log("data submitted"))
-.catch((err)=>console.log(err))
+        context.details.push(data);
+        console.log(context.details)
+// axios.post('http://localhost:8000/adduser', data)
+// .then((res)=>console.log("data submitted"))
+// .catch((err)=>console.log(err))
 navigate('/studentdetails')
     }
   

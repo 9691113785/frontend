@@ -2,21 +2,19 @@ import React, { useContext } from 'react'
 import { store } from '../App';
 import '../Styles/StudentDetail.css'
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 
 const StudentDetail = () => {
     const navigate = useNavigate();
 
     const context = useContext(store);
 
-    const handledelete = (stuname) => {
-        // context.details.splice(index,1);
-        // alert(stuname)
-        const user = {stuname:stuname}
+    const handledelete = (index) => {
+        context.details.splice(index,1);
+        // const user = {stuname:stuname}
        
-          axios.post('http://localhost:8000/delete', user)
-        .then((res)=>console.log("data deleted"))
-        .catch((err)=>console.log(err))
+        //   axios.post('http://localhost:8000/delete', user)
+        // .then((res)=>console.log("data deleted"))
+        // .catch((err)=>console.log(err))
 
 
         navigate('/studentdetails')
@@ -47,7 +45,7 @@ const StudentDetail = () => {
                 <td>{item.department}</td>
                 <td>{item.salary}</td>
                 <td>
-                  <button onClick={()=>{handledelete(item.stuname)}}>Delete</button>
+                  <button onClick={()=>{handledelete(index)}}>Delete</button>
                   <Link to='/edituser' state={{dataa:index}}><button >Edit</button></Link>
                 </td>
               </tr>
