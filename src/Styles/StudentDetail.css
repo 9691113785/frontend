@@ -1,0 +1,31 @@
+.table {
+    border-collapse: collapse;
+    width: 96%;
+    margin: 2%;
+  }
+  
+  td {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    border: 1px solid #ddd;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    background-color: #666060;
+  }
+  
+  button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .user_heading{
+text-align: center;  }

@@ -1,0 +1,36 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 10px 10px 10px  rgb(100, 93, 93);
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.logo img{
+    width: 100%;
+}
+.stu_route{
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.stu_route:hover{
+    cursor: pointer;
+    color: red;
+}
+.add_user{
+    font-weight: bold;
+    font-size: 1.7em;
+    transition: transform 0.5s;
+}
+.add_user:hover{
+    cursor: pointer;
+    color:red;
+    transform: scale(1.2);
+    padding: 5px 0px;
+    box-sizing: content-box;
+}

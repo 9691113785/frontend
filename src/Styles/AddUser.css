@@ -1,0 +1,33 @@
+.form_container{
+    background-color: white;
+    width: 30%;
+  margin: auto;
+  margin-top: 3%;
+  padding: 2%;
+  box-shadow: 10px 10px 10px  rgb(100, 93, 93);
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-field {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .submit-button:hover {
+    background-color: #267228;
+
+
+  }
