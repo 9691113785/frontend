@@ -29,5 +29,12 @@ form {
   .submit-button:hover {
     background-color: #267228;
 
+  }
 
+  @media only screen and (max-width:710px){
+    .form_container{
+      width: 90%;
+    
+  
+  }
   }
